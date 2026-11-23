@@ -1,56 +1,46 @@
-# Welcome to your Expo app 👋
+# Workout Set Logger
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native app for logging workout sets. Pick an exercise, enter the sets, reps, and weight, and save it locally. The past sets will show up in a history list.
 
-## Get started
+I built this as my individual prototype for my Oregon State University CS 461 capstone class (a cross-platform personal trainer app), where I compared React Native and Kotlin by building the same feature in both.
 
-1. Install dependencies
+## Built With
 
-   ```bash
-   npm install
-   ```
+React Native, Expo, expo-sqlite (TypeScript)
 
-2. Start the app
+## Getting Started
 
-   ```bash
-   npx expo start
-   ```
+**Requirements:** [Node.js](https://nodejs.org/) (LTS) and the **Expo Go** app on your phone, or an Android emulator.
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+``` bash
+git clone https://github.com/CalenGheorghita/workout-set-logger.git
+cd workout-set-logger
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+Scan the QR code with Expo Go (Android) or the Camera app (iPhone), or press 'a' to open an Android emulator
 
-### Other setup steps
+## Usage
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+1. Tap an exercise (Bench Press, Squat, Deadlift, Overhead Press).
+2. Enter the sets, reps, and weight, then tap **Save Set**
+3. The set appears in the history list, like `Squat: 3 x 5 @ 225 lb`. The sets are saved with SQLite, so they stay after you close the app.
 
-## Learn more
+## Project Structure
+```
+src/
+│   db.ts
+│   
+└───app
+        index.tsx
+        _layout.tsx
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Future Ideas
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Edit/delete sets, have custom exercises, and grouping history by workout.
 
-## Join the community
+## License
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT. See [LICENSE](LICENSE).
