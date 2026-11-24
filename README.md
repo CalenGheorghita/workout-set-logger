@@ -4,6 +4,8 @@ A React Native app for logging workout sets. Pick an exercise, enter the sets, r
 
 I built this as my individual prototype for my Oregon State University CS 461 capstone class (a cross-platform personal trainer app), where I compared React Native and Kotlin by building the same feature in both.
 
+<img src="docs/screenshot.png" alt="Workout Set Logger screenshot" width="225">
+
 ## Built With
 
 React Native, Expo, expo-sqlite (TypeScript)
